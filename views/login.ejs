@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        login page
+    </title>
+</head>
+
+<body>
+    <fieldset style="display: block; margin: auto; width: 20%; margin-top: 100px;">
+        <legend align="center">Login</legend>
+        <center>
+            <form action="/user/login" method="POST">
+                <input type="email" id="" placeholder="Enter Your Email" name="email" value=<%=locals.email %> >
+                <br><br>
+                <input type="password" id="" placeholder="Enter Your Password" name="password">
+                <p style="color: red;">
+                    <%=locals.msg%>
+                </p>
+                <p style="color : blue">Forgot
+                    Password ?</p>
+                <input type="submit" id="" value="Submit">
+            </form>
+        </center>
+    </fieldset>
+</body>
+
+</html>
