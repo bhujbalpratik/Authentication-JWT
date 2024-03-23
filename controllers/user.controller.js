@@ -18,10 +18,13 @@ export const registerPost = async (req, res) => {
   const hashedPassword = await bcyrpt.hash(password, 10);
   console.log(hashedPassword);
 
-  return await User.create({
+  await User.create({
     name,
     email,
     password: hashedPassword,
+  });
+  res.render("login", {
+    title: "Login Page",
   });
 };
 
